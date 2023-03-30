@@ -10,7 +10,7 @@ const timer = document.querySelector('.timer');
     console.log(timer);
     timer.style.display = 'flex';
     timer.style.gap = '10px';
-    timer.style.fontSize = '25px';
+    timer.style.fontSize = '20px';
 
 const startBtn = document.querySelector('button[data-start]');
     startBtn.setAttribute ('disabled',true);
