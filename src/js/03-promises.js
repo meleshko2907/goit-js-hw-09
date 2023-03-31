@@ -13,11 +13,10 @@ function createOwnPromise(event){
   event.preventDefault();
 
   let delay = Number(firstDelay.value);
-  const delayStepValue = Number(delay.value);
-  console.log(delayStepValue);
+  const stepValue = Number(stepDelay.value);
   const amountValue = Number(amount.value);
 
-for (let i = 1; i <= amountValue; i++) {
+for (let i = 1; i <= amountValue; i+=1) {
   createPromise(i, delay)
     .then(({position, delay}) => {
       Notiflix.Notify.success(`✅ Fulfilled promise ${i} in ${delay}ms`);
@@ -25,7 +24,7 @@ for (let i = 1; i <= amountValue; i++) {
     .catch(({position, delay}) => {
       Notiflix.Notify.failure(`❌ Rejected promise ${i} in ${delay}ms`);
     });
-    delay += delayStepValue;
+    delay += stepValue;
 }
 }
 

@@ -1,6 +1,8 @@
 const startButton = document.querySelector('button[data-start]');
 const stopButton = document.querySelector('button[data-stop]');
+stopButton.disabled = true;
 let intervalId = null;
+stopButton.disabled = true;
 
 console.log(stopButton);
 console.log(startButton);

@@ -53,6 +53,7 @@ const options = {
 
   function startTime() {
     intervalId = setInterval(() => {
+      startBtn.disabled = true;
       backTime = flatPicker.selectedDates[0] - new Date();
       const updateTime = convertMs(backTime);
       updateClock(updateTime);
